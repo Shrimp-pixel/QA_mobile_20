@@ -8,7 +8,8 @@ from selene import support
 from appium import webdriver
 
 import config
-from mobile_tests_lesson_13 import utils
+from wikipedia_mobile import utils
+from wikipedia_mobile.utils.allure import attach
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -35,6 +36,10 @@ def driver_management(request):
         utils.allure.attach.screen_xml_dump()
 
     session_id = browser.driver.session_id
+
+    attach.screenshot()
+    attach.screen_xml_dump()
+    attach.screen_html_dump()
 
     allure.step('close app session')(browser.quit)()
 

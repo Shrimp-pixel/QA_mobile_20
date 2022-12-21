@@ -2,7 +2,7 @@ import allure
 from selene.support.shared import browser
 
 import config
-from mobile_tests_lesson_13 import utils
+from wikipedia_mobile import utils
 
 
 def screenshot(*, name='screenshot'):

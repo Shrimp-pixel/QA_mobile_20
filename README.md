@@ -1,37 +1,68 @@
-# Mobile tests on BrowserStack with Python + Pytest + Selene + Appium + Allure
+# Проект по тестированнию мобильного приложения Wikipedia [apps-android-wikipedia](https://github.com/wikimedia/apps-android-wikipedia)
+<p align="left">
+  <img width="50%" src="img/reqres.png"/>
+</p>
 
-## Lesson plan
+## Содержание:
+* [Тест-кейсы]()
+* [Использованные технологии]()
+* [Сборка в Jenkins]()
+* [Allure Отчет]()
+* [Отчет в Telegram]()
+* [Allure TestOps]()
+* [Jira]()
 
-### Demo Sample
+## Тест-кейсы
+* Проверка поля поиска
+* Проверка страницы getting started
+* Проверка открытия настроек
+* Проверка открытия кастомизации
 
-1. Clone this repo
-2. Do `poetry install`
-3. Open project in PyCharm, setup interpreter
-4. Sign up on BrowserStack
-5. Get your username, access key and sample app id
-   (somewhere from your [browserstack dashboard getting started guide;)](https://app-automate.browserstack.com/dashboard/v2/quick-start/get-started#introduction))
-6. Copy `browserstack_sample.py` from [github.com/browserstack/python-appium-app-browserstack/blob/w3c/android/browserstack_sample.py](https://github.com/browserstack/python-appium-app-browserstack/blob/w3c/android/browserstack_sample.py]) to project root or created `demo` python package, and set your credentials and app id remembered in previous step;)
-7. Run file from PyCharm
-8. Check the build status (find it in the BrowserStack dashboard - sidebar)
+## Использованные технологии
+<p align="center">
+  <code><img width="5%" title="Python" src="D:\QApython\shrimp-pixel\icons\python.png"></code>
+  <code><img width="5%" title="Pycharm" src="D:\QApython\shrimp-pixel\icons\pycharm.png"></code>  
+  <code><img width="5%" title="Pytest" src="D:\QApython\shrimp-pixel\icons\pytest.png"></code>
+  <code><img width="5%" title="Allure Report" src="D:\QApython\shrimp-pixel\icons\allure.png"></code>
+  <code><img width="5%" title="Allure TestOps" src="D:\QApython\shrimp-pixel\icons\allure_testops.png"></code>
+  <code><img width="5%" title="Jenkins" src="D:\QApython\shrimp-pixel\icons\jenkins.png"></code>
+  <code><img width="5%" title="Selene" src="D:\QApython\shrimp-pixel\icons\selene.png"></code>
+  <code><img width="5%" title="Appium" src="D:\QApython\shrimp-pixel\icons\appium.png"></code>
+  <code><img width="5%" title="Browserstack" src="D:\QApython\shrimp-pixel\icons\browserstack.png"></code>
+  <code><img width="5%" title="Jira" src="D:\QApython\shrimp-pixel\icons\jira.png"></code>
+  <code><img width="5%" title="Telegram" src="D:\QApython\shrimp-pixel\icons\telegram.png"></code>
+</p>
 
-### Demo Simple Framework
+## Сборка в Jenkins
+Cборка в [Jenkins](JenkinUI)
 
-TODO: document rest of the demo
+<p align="left">
+  <img width="90%" src="screenshot/Jenkin.png"/>
+</p>
 
-Prerequisites:
-- to run tests locally – download wikipedia app apk from https://github.com/wikimedia/apps-android-wikipedia/releases/tag/latest
+## Allure Отчет
+[Allure](AlluerUI)
 
-Examples of usage:
+<p align="left">
+  <img width="90%" src="screenshot/Allure.png"/>
+</p>
 
-to run with config.local.env:
+## Отчет в Telegram
+<p align="left">
+  <img width="90%" src="screenshot/AllureTelegram.png"/>
+</p>
 
-```bash
-pytest tests/android/patched_style/test_wikipedia.py --alluredir reports/
-```
+## Allure TestOps
+[Allure](AllureTestOpS)
 
-to run with config.personal.env (create it first):
-```bash
-env -S 'context=personal' pytest tests/android/patched_style/test_wikipedia.py --alluredir reports/
-```
+<p align="left">
+  <img width="90%" src="screenshot/AllureTestOps.png"/>
+</p>
 
+## Jira
+[Allure](Jira)
+
+<p align="left">
+  <img width="90%" src="screenshot/Jira.png"/>
+</p>
 

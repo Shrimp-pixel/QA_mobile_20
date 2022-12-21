@@ -3,7 +3,7 @@ from selene import have
 from selene.support.shared import browser
 from allure import step
 
-from mobile_tests_lesson_13.model import app
+from wikipedia_mobile.model import app
 
 
 def test_search():
@@ -22,7 +22,6 @@ def test_search():
 
 
 def test_getting_started():
-
     with step('Title should be visible'):
         browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/primaryTextView')) \
             .should(have.text('The Free Encyclopedia'))
@@ -47,3 +46,32 @@ def test_getting_started():
 
         browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/fragment_onboarding_done_button')).click()
 
+    with step('Search should be found'):
+        browser.all(
+            (AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')
+        ).should(have.size_greater_than(0))
+
+
+def test_settings():
+    app.given_opened()
+
+    with step('Open settings'):
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/menu_icon')).click()
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/main_drawer_settings_container')).click()
+
+    with step('Content should be found'):
+        browser.all(
+            (AppiumBy.ID, 'org.wikipedia.alpha:id/action_bar')
+        ).should(have.size_greater_than(0))
+
+
+def test_customise():
+    app.given_opened()
+
+    with step('Click customize'):
+        browser.element((AppiumBy.ID, 'org.wikipedia.alpha:id/view_announcement_action_positive')).click()
+
+    with step('Content should be found'):
+        browser.all(
+            (AppiumBy.ID, 'org.wikipedia.alpha:id/action_bar')
+        ).should(have.size_greater_than(0))
